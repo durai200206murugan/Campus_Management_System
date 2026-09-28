@@ -29,7 +29,7 @@ public class Main
             sc.nextLine();
         }
         //constructing student object and displaying report card
-        Student student=new Student(studenrid, studentname, age, department, marks);
+        Student student=new ScholarshipStudent(studenrid, studentname, age, department, marks);
         student.displaystudentInfo(true);
         Student.displayStudentCount();
         StudentService studentService = new StudentService();

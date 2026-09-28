@@ -1,7 +1,10 @@
 package com.campus.model;
 
-public class Student{
-    
+import com.campus.Contract.StudentOperations;
+
+public  abstract class Student implements StudentOperations{
+    //Encapsulation - data hiding
+    //instance variables
     private int studentid;
     private String studentname;
     private int age;
