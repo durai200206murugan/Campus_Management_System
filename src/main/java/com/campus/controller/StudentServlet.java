@@ -17,18 +17,21 @@ public class StudentServlet extends HttpServlet {
     @Override 
     public void doGet(HttpServletRequest request,HttpServletResponse responce)
             throws IOException, ServletException{
-        var student = studentService.getStudents();
-        request.setAttribute("student", student);
-        RequestDispatcher dispatcher = request.getRequestDispatcher("/student.jsp");
-        dispatcher.forward(request, responce);
+                var students = studentService.getStudents();
+                request.setAttribute("students", students);
+                RequestDispatcher dispatcher = request.getRequestDispatcher("/Student.jsp");
+                dispatcher.forward(request, responce);
+       
     }
 
     @Override 
     public void doPost(HttpServletRequest request,HttpServletResponse responce)
             throws IOException{
         String name = request.getParameter("name");
-        String course = request.getParameter("course");
-        studentService.addStudent(name, course);
+        String department = request.getParameter("department");
+        String ageParam = request.getParameter("age");
+        int age = Integer.parseInt(ageParam);
+        studentService.addStudent(name, department, age);
         responce.sendRedirect("/students");
     }
 

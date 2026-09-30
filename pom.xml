@@ -31,7 +31,22 @@
     <dependencies>
 
         <dependency>
+        <!--postgresql jdbc driver-->
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>42.7.8</version>
+        </dependency>    
 
+            <groupId>org.postgresql</groupId>
+
+            <artifactId>postgresql</artifactId>
+
+            <version>42.6.0</version>
+
+        </dependency>
+
+        <dependency>
             <groupId>jakarta.servlet</groupId>
 
             <artifactId>jakarta.servlet-api</artifactId>
